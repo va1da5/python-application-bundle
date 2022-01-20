@@ -1,0 +1,53 @@
+[tool.black]
+line-length = 119
+target-version = ['py37', 'py38', 'py39']
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.toml
+  |\.eggs
+  |\.sh
+  |\.tox
+  |\.git
+  |\.ini
+  |\.pytest_cache
+  |\.venv
+  |build
+  |dist
+  |Dockerfile
+  |Jenkinfile
+  |node_modules
+  |.*/migrations/.*
+)/
+'''
+
+[tool.isort]
+profile = 'black'
+skip_gitignore = true
+skip='migrations'
+[tool.coverage]
+[tool.coverage.run]
+omit = ['tests']
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = [
+'if TYPE_CHECKING:',
+'pragma: no cover',
+"if __name__ == '__main__':",
+]
+
+[mypy]
+python_version = '3.9'
+allow_redefinition = true
+check_untyped_defs = true
+show_error_codes = true
+warn_unused_ignores = true
+strict_optional = true
+incremental = true
+warn_redundant_casts = true
+warn_unused_configs = true
+local_partial_types = true
+show_traceback = true
+exclude = 'migrations/'
+strict=true

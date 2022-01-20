@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  display; block;
+}
+
+img {
+  opacity: 0.5;
+}
+
+#circle {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid darkorange;
+  background: rgba(255, 165, 0, 0.5);
+  font-size: 50px;
+  font-family: Times New Roman;
+  color: rgba(255, 165, 0, 1);
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  supported by Chrome and Opera */
+}
+
+
+/* unvisited link */
+
+a:link {
+  color: darkorange;
+}
+
+
+/* visited link */
+
+a:visited {
+  color: darkorange;
+}
+
+
+/* mouse over link */
+
+a:hover {
+  color: darkorange;
+}
+
+
+/* selected link */
+
+a:active {
+  color: darkorange;
+}
+.text {
+  position: absolute;
+  bottom: 9vh;
+  left: 64%;
+  /*right: 4vw;*/
+}
+.retro {
+  font-family: "Pacifico", cursive;
+  font-size: 10vh;
+  display: block;
+  transform: rotate(-20deg) skew(-25deg);
+  color: magenta;
+  text-shadow: -0.5vh 0 rgb(64, 255, 128), 0 0.5vh rgb(64, 255, 128), 0.5vh 0 rgb(64, 255, 128), 0 -0.5vh rgb(64, 255, 128);
+}
+
+#credit {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif
+}
